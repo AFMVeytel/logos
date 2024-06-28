@@ -157,7 +157,10 @@ function createColorCopies(element, pathName, colors, idExt = '') {
     colors.forEach((color) => {
         const divEl = document.createElement('div');
         divEl.classList.add('svg-con');
-        divEl.innerHTML = `<p>${color}</p>`
+        divEl.innerHTML = `
+        <p>logo color: ${color}</p>
+        <p>current background: <span class=bg></span></p>
+        `
         divEl.id = `div-${i}-${idExt}`;
         divEl.addEventListener('click', ()=>openColorPicker(divEl.id));
         const logoEl = element.cloneNode(true);
@@ -188,6 +191,7 @@ function openColorPicker(elId) {
         colorEl.addEventListener('click', ()=> {
             const target = document.getElementById(targetEl.id);
             target.style.background = color;
+            target.querySelector('.bg').innerText = color;
         });
 
         colorsCon.appendChild(colorEl);

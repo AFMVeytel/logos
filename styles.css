@@ -16,13 +16,17 @@ div.svg-con {
     width: 100%;
     height: 10rem;
     background-color: lightgray;
+    color: red;
     cursor: pointer;
+    
 }
 
 div.svg-con p {
     margin: auto 0;
     margin-right: 2rem;
-    color: red;
+}
+div.svg-con span {
+    margin-right: 2rem;
 }
 div svg {
     height: 90%;
