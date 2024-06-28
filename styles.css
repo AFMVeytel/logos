@@ -21,6 +21,10 @@ div.svg-con {
     
 }
 
+div.svg-con:hover {
+    filter: brightness(110%);
+}
+
 div.svg-con p {
     margin: auto 0;
     margin-right: 2rem;
